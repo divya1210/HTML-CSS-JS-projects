@@ -33,7 +33,7 @@
       <h5>Get success followed by education📚</h5>
       <nav class="links">
         <ul>
-          <li><a href="ex1.html">Home</a></li>
+          <li><a href="maths.html">Home</a></li>
           <li><a href="login.html">Login</a></li>
           <li><a href="contact-us.html">Contact-us</a></li>
           <li><a href="registration.html">Register Now</a></li>
@@ -44,13 +44,13 @@
       <h2><em>Enroll now</em></h2>
       <form action="" class="e-form">
         <label for="Fname" class="register">First Name</label>
-        <input type="text" name="Fname" /><br />
+        <input type="text" name="Fname" id="fname" /><br />
         <label for="Lname" class="register">Last Name</label>
-        <input type="text" name="Lname" /><br />
+        <input type="text" name="Lname" id="lname" /><br />
         <label for="number" class="register">Mobile Number</label>
-        <input type="number" name="number" /><br />
+        <input type="number" name="number" id="num" /><br />
         <label for="number" class="register">Alternate Number</label>
-        <input type="number" name="number" /><br />
+        <input type="number" name="number" id="num" /><br />
         <label for="grades" class="register">Select Grade</label>
         <select name="grades">
           <option>V</option>
@@ -68,4 +68,16 @@
       <h4>Thank You for Visiting Us!</h4>
     </div>
   </body>
+  <script>
+    const form = document.querySelector("form");
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const num = document.getElementById("num");
+    form.onsubmit = function (e) {
+      if (fname.value === "" || lname.value === "") {
+        e.preventDefault();
+        alert("You need to fill this!");
+      }
+    };
+  </script>
 </html>

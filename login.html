@@ -36,7 +36,7 @@
             <h5>Get success followed by education📚</h5>
             <nav class="links">
               <ul>
-                <li><a href="ex1.html">Home</a></li>
+                <li><a href="maths.html">Home</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact-us.html">Contact-us</a></li>
                 <li><a href="registration.html">Register Now</a></li>
@@ -66,6 +66,15 @@
             var x =document.getElementById("mail").value;
             alert("you submited sucessfully" + x);
           }
+          const user = document.getElementById('mail');
+          const passward = document.getElementById('passward');
+          form.onsubmit = function (e) {
+      if (mail.value === "" || passward.value === "") {
+        e.preventDefault();
+        para.textcontent = "You need to fill this!";
+      }
+    };
+          
         </script>
         
         </body>
